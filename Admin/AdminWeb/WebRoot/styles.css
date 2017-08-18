@@ -1,0 +1,145 @@
+
+
+/* 
+ * navigation bar styles 
+ */
+div#navbar td { 
+	border-bottom: 1px solid black;
+	border-left: 1px solid black
+}
+div#navbar td#navLinkLeft { 
+	border-bottom: 1px solid black;
+	border-left: 0px solid black
+}
+div#navbar a { 
+	color: black;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px
+}
+div#navbar a:hover {
+	color:orange;
+}
+
+/* 
+ * main page styles
+ */
+.demoLoginInfo { 
+	font-weight:bold;
+	font-size: 14px;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.evenRow {
+background: #E4F1FA;
+valign: bottom;
+}
+.oddRow {
+background: white;
+valign: bottom;
+}
+
+.emptyColumn06 {
+width: 06px;
+height:20px;
+}
+
+.emptyColumn10 {
+width: 10px;
+height:20px;
+}
+.gwNameColumn {
+text-align: left;
+width: 260px;
+height:24px;
+font-weight: bold;
+valign: bottom;
+}
+.gwMacColumn {
+text-align: left;
+width: 260px;
+height:24px;
+font-weight: bold;
+valign: bottom;
+}
+
+.error {
+color: #CC0000;
+}
+.image {
+border: 0px;
+height:24px;
+width: 24px;
+}
+
+.clearImage {
+border: 0px;
+height:37px;
+width: 3px;
+}
+
+
+.style1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.button {
+	bgcolor: #F0F0F0 ;
+}
+.labelStyle {
+	height:48px;
+	FONT-SIZE: 16px;
+	font-weight: bold;
+}
+.podNameColumn {
+text-align: left;
+width: 260px;
+height:24px;
+valign: bottom;
+}
+.podEuiColumn {
+text-align: left;
+width: 260px;
+height:24px;
+valign: bottom;
+}
+.podLqiColumn {
+text-align: center;
+height:24px;
+font-weight: bold;
+valign: bottom;
+}
+.podDeleteColumn {
+text-align: center;
+height:24px;
+font-weight: bold;
+valign: bottom;
+}
+.podHeader {
+text-align: center;
+height:36px;
+font-weight: bold;
+valign: bottom;
+}
+
+.message {
+color: #4EA8DE;
+}
+.sensorHeader {
+text-align: center;
+font-size: 14px;
+}
+
+/*
+ * Alarm history popup
+ */
+.evenRowLqi {
+	background: #E4F1FA;
+}
+.oddRowLqi {
+	background: white;
+}

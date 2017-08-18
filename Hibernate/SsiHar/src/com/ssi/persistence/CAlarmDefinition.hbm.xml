@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CAlarmDefinition" table="ALARM_DEFINITION" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">alarm_definition_sequence</param>
+			</generator>
+		</id>
+		<version name="version" column="VERSION" />
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="description"  column="DESCRIPTION" type="string"/>
+	    <property name="notes"  column="NOTES" type="string"/>
+		<property name="operand1"  column="OPERAND1" type="float" not-null="true"/>
+		<property name="operand2"  column="OPERAND2" type="float" />
+		<property name="operator1"  column="OPERATOR1" type="short" not-null="true"/>
+		<property name="operator2"  column="OPERATOR2" type="short"/>
+		<property name="connector"  column="CONNECTOR" type="short" />
+		<property name="filterLimit"  column="FILTER_LIMIT" type="short" not-null="true"/>
+		<property name="filterLength"  column="FILTER_LENGTH" type="short" not-null="true"/>
+		<property name="notifyList"  column="NOTIFY_LIST" type="string"/>
+		<property name="message"  column="MESSAGE" type="string"/>
+		<property name="enabled"  column="ENABLED" type="true_false" not-null="true"/>
+	    
+	    <property name="voiceNotified"  column="VOICE_NOTIFIED" type="true_false" not-null="true"/>
+	    <property name="voiceNotifyList"  column="VOICE_NOTIFIY_LIST" type="string" />
+	    		
+		<many-to-one name="measurement" class="com.ssi.persistence.CMeasurement" column="MEASUREMENT_ID" not-null="true"/>
+		
+		<set name="alarms" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="256" >
+            <key column="ALARM_DEFINITION_ID"/>
+            <one-to-many class="com.ssi.persistence.CAlarm"/>
+        </set>
+        
+        <!--  CAUSED A HORRIBLE ERROR!!!!!
+        <list name="alarms" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="256">
+            <key column="ALARM_DEFINITION_ID"/>
+            <index column="ID" type="long" />
+            <one-to-many class="com.ssi.persistence.CAlarm"/>
+        </list>
+        -->
+         
+        <set name="alarmHistory" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="256" >
+            <key column="ALARM_DEFINITION_ID"/>
+            <one-to-many class="com.ssi.persistence.CAlarmHistory"/>
+        </set>
+         <!--
+         <list name="alarmHistory" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="256">
+            <key column="ALARM_DEFINITION_ID"/>
+            <index column="TIMESTAMP" type="timestamp" />
+            <one-to-many class="com.ssi.persistence.CAlarmHistory"/>
+        </list>
+        -->
+	</class>
+</hibernate-mapping>

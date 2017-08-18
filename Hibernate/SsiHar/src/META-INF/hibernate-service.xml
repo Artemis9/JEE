@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==================================================================== -->
+<!-- Hibernate session factory and         management                     -->
+<!--<mbean code="org.jboss.cache.TreeCache" name="jboss.cache:service=TreeCache" > -->
+<!--   	<depends>jboss:service=Naming</depends>                           -->
+<!--  	<depends>jboss:service=TransactionManager</depends>               -->
+<!--   	<attribute name="TransactionManagerLookupClass">org.jboss.cache.JbossTransactionManagerLookup</attribute>-->
+<!--   	<attribute name="IsolationLevel">REPEATABLE_READ</attribute>      -->
+<!--   	<attribute name="CacheMode">LOCAL</attribute>                     -->
+<!--   	<attribute name="ClusterName">TreeCache-Cluster</attribute>       -->
+<!--   </mbean>													          -->
+<!-- ==================================================================== -->
+  <server>
+   <mbean code="org.jboss.hibernate.jmx.Hibernate"
+      name="jboss.har:service=Hibernate">
+      <attribute name="DatasourceName">java:/PostgresDS</attribute>
+      <attribute name="SessionFactoryName">java:/org/hibernate/SessionFactory</attribute>
+      <attribute name="Dialect">org.hibernate.dialect.PostgreSQLDialect</attribute>
+      <attribute name="Hbm2ddlAuto">update</attribute>
+      <attribute name="ShowSqlEnabled">true</attribute>
+      <attribute name="QueryCacheEnabled">true</attribute>
+      <attribute name="CacheProviderClass">org.hibernate.cache.HashtableCacheProvider</attribute>
+   </mbean>
+</server>

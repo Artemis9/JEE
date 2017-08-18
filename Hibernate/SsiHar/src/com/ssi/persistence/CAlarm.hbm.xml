@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CAlarm" table="ALARM">
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">alarm_sequence</param>
+			</generator>
+		</id>
+		<property name="value"  column="VALUE" type="float" not-null="true"/>
+		<property name="ts"  column="TIMESTAMP" type="timestamp" not-null="true"/>
+		<property name="active"  column="ACTIVE" type="true_false" not-null="true"/>
+		<many-to-one name="definition" class="com.ssi.persistence.CAlarmDefinition" column="ALARM_DEFINITION_ID" not-null="true"/>
+	    <many-to-one name="sd" class="com.ssi.persistence.CSensorData" column="SENSOR_DATA_ID" not-null="true"/>
+	</class>
+</hibernate-mapping>

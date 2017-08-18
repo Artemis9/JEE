@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+	<xml-body>
+	<state_info>
+		<hasPrev>true</hasPrev>
+		<hasNext>false</hasNext>
+		<lastAvailTs>1149305820000</lastAvailTs>
+		<autoScale>false</autoScale>
+		<manualMin>12.34</manualMin>
+		<manualMax>90.786</manualMax>
+		<ave>182.45</ave>
+		<median>190.23</median>
+		<stddev>4.2</stddev>
+	</state_info> 
+	</xml-body>

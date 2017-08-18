@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN" "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+	<!-- +++++++++++++++++++++ Navigation rules ++++++++++++++++++ -->
+	<navigation-rule>
+		<description>List Gateways Page</description>
+		<from-view-id>/gatewayList.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Detail</from-outcome>
+			<to-view-id>/gatewayDetail.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Show Gateway Details</description>
+		<from-view-id>/gatewayDetail.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Update</from-outcome>
+			<to-view-id>/gatewayDetail.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/gatewayDetail.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Back</from-outcome>
+			<to-view-id>/gatewayList.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Gateway Delete popup</description>
+		<from-view-id>/podPopup.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Delete</from-outcome>
+			<to-view-id>/gatewayDetail.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/gatewayDetail.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	<!-- +++++++++++++++++++++ Managed beans +++++++++++++++++++++ -->
+	<managed-bean>
+		<description>
+			Gateway list bean
+		</description>
+		<managed-bean-name>GwList</managed-bean-name>
+		<managed-bean-class>com.ssi.admin.web.bean.GwList</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Gateway details bean
+		</description>
+		<managed-bean-name>GwDetail</managed-bean-name>
+		<managed-bean-class>com.ssi.admin.web.bean.GwDetail</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Pod Delete bean
+		</description>
+		<managed-bean-name>Pod</managed-bean-name>
+		<managed-bean-class>com.ssi.admin.web.bean.Pod</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Pod LQI History bean
+		</description>
+		<managed-bean-name>LqiHistBean</managed-bean-name>
+		<managed-bean-class>com.ssi.admin.web.bean.LqiHistory</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<!-- +++++++++++++++++++++ Components +++++++++++++++++++++ -->
+
+</faces-config>
+

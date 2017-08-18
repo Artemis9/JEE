@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+	<xml-body>
+	<ledgendData>
+		<alarm1Label>greater than 190982.0</alarm1Label>
+		<alarm2Label>less than 82.0</alarm2Label>
+		<decimated>true</decimated>
+	</ledgendData>
+	</xml-body>

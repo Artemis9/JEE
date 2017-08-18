@@ -1,0 +1,87 @@
+/**
+ * ACCSENSE Date selector 
+ */
+p {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000; 
+	z-index:9999;
+}
+
+Table {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; color:#000000;
+	position:relative;
+	z-index:9999;
+}
+ 
+.awlDateSelectContainer{
+	position:relative;
+} 
+
+.awlDateSelectClose {
+	padding-bottom:4px;
+	width:330px;
+}
+.awlDateSelectButton {
+	cursor:pointer;cursor:hand;
+	width:75px;
+}
+.awlDateSelectFieldLabel {
+	position:absolute;
+	right:162px; top:4px;
+	font: bold 12px Arial;
+	color: white;
+	text-decoration: none;
+	text-align:right;
+	width: 75px;
+}
+.awlDateSelectTextField {
+	position:absolute;
+	top:-1px;
+	cursor:pointer;cursor:hand;
+	width: 75px;
+	text-align: center;
+}
+.awlDateSelectDateField {
+	left:76px;
+}
+.awlDateSelectTimeField {
+	left:155px;
+}
+.awlDateSelectInputContainer {
+	position:relative;
+	width:245px;
+	height:27px;
+	/* border:dashed black thin; */
+}
+.awlDateSelectPopupContainer {
+	position:absolute;
+	top:8px; left:70px;
+	border:thin black solid;
+	width: 341px;
+	background-color:#77C0E9;
+	z-index:9999;
+}
+.awlDateSelectPopupCalendar {
+	margin-left:15px;
+}
+
+/*
+ * Overrides for DatePicker widget
+ */
+div..timePickerContainer {
+	margin-top: 20px;
+	margin-left: -50px;
+}
+div.anyTimeContainer {
+	color:#FF0000;
+	position:relative;
+	left:23px;
+	top:3px;
+}
+span.previousYear {
+	color:white;
+}
+span.nextYear {
+	color:white;
+}

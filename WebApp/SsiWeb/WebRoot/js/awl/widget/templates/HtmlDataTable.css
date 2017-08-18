@@ -1,0 +1,52 @@
+/**
+ * ACCSENSE Data Table 
+ */
+.dataTable {
+	width:700px;
+}
+.dataTableColumn {
+	background: #77C0E9;
+	position:relative;
+	overflow:scroll;
+	overflow-y:scroll;
+	overflow-x:visible;
+	height:330px;
+	border:none;
+}
+
+
+/* 
+ * Table classes
+ */
+.awlDataTableHeader {
+	text-align: center;
+	font-size: 14px;
+}
+.awlValueHeaderSubtitle {
+	font-size: 8px;
+	font-style: italic;
+}
+.awlDataTableEvenRow {
+	background: #E4F1FA;
+}
+.awlDataTableOddRow {
+	background: white;
+}
+.awlDataTableValueCol {
+}
+.awlDataTableTimeCol {
+}
+.awlDataTableSpacer {
+	width: 45px;
+}
+
+p {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000; 
+}
+
+Table.awlDataTable {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; color:#000000;
+}
+

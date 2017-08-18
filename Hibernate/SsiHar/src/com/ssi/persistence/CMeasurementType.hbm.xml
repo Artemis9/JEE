@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CMeasurementType" table="MEASUREMENT_TYPE" mutable="false">
+		<cache usage="read-only"/>
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">measurement_type_sequence</param>
+			</generator>
+		</id>
+		<property name="typeId"  column="TYPE_ID" type="string" not-null="true" unique="true"/>
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="defaultName"  column="DEFAULT_NAME" type="string" not-null="true"/>
+		<property name="description"  column="DESCRIPTION" type="string"/>
+		<property name="defaultCoeff1"  column="DEFAULT_COEFF1"  not-null="true"/>
+		<property name="defaultCoeff2"  column="DEFAULT_COEFF2"  not-null="true"/>
+		<property name="defaultCoeff3"  column="DEFAULT_COEFF3"  not-null="true"/>
+		<property name="defaultCoeff4"  column="DEFAULT_COEFF4"  not-null="true"/>
+		<property name="userChangeableCoeffs"  column="USER_CHANGEABLE_COEFFS" type="true_false" not-null="true"/>
+		<property name="userChangeableUnit"  column="USER_CHANGEABLE_UNIT" type="true_false" not-null="true" />
+		<property name="defaultValueMin"  column="DEFAULT_VALUE_MIN"  not-null="true" />
+		<property name="defaultValueMax"  column="DEFAULT_VALUE_MAX"  not-null="true"/>
+		<property name="defaultMinMaxAuto"  column="DEFAULT_MIN_MAX_AUTO"  type="true_false" not-null="true"/>
+		
+		
+		<set name="measurementUnits"  table="MEASUREMENT_TYPE_UNIT" lazy="true">
+            <key column="MEASUREMENT_TYPE_ID"/>
+            <many-to-many column="MEASUREMENT_UNIT_ID" class="com.ssi.persistence.CMeasurementUnit"/>
+        </set>
+        <many-to-one name="defaultUnit" class="com.ssi.persistence.CMeasurementUnit" column="DEFAULT_UNIT_ID" not-null="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CSensorData" table="SENSOR_DATA" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">sensor_data_sequence</param>
+			</generator>
+		</id>
+		<property name="value"  column="VALUE" type="float" not-null="true"/>
+		<property name="order"  column="ORDERING" type="short" not-null="true"/>
+		<many-to-one name="measurement" class="com.ssi.persistence.CMeasurement" column="MEASUREMENT_ID" not-null="true"/>
+	    <many-to-one name="listenerEvent" class="com.ssi.persistence.CListenerEvent" column="LISTENER_EVENT_ID" not-null="true"/>
+		<set name="alarms" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="16" >
+            <key column="SENSOR_DATA_ID"/>
+            <one-to-many class="com.ssi.persistence.CAlarm"/>
+        </set>
+	</class>
+</hibernate-mapping>

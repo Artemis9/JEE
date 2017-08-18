@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml-body>
+
+<sensorList>
+
+<pod>
+<name>Refrigeration Pod (Model A1-02)</name>							
+<sensor>
+  <name>Compressor Temp (RTD)</name>
+  <units>F</units>
+</sensor> 	  				
+<sensor>
+  <name>Refrigerator Section Temp (Thermistor)</name>
+  <units>F</units>
+</sensor>
+<sensor>
+  <name>Ambient Room Temp - 1</name>
+  <units>F</units>
+</sensor>
+<sensor>
+  <name>Freezer Section Temp (Thermocouple)</name>
+  <units>F</units>
+</sensor>
+<sensor>
+  <name>Power Consumption</name>
+  <units>Watts</units>
+</sensor>
+<sensor>
+  <name>Supply Voltage</name>
+  <units>Volts</units>
+</sensor> 
+</pod>
+
+<pod>
+<name>Entry/Exit Pod (Model A1-02)</name>							
+<sensor>
+  <name>Entry/Exit Counter</name>
+  <units>/30s</units>
+</sensor> 	  				
+<sensor>
+  <name>Ambient Room Temp - 2</name>
+  <units>F</units>
+</sensor>
+<sensor>
+  <name>Supply Voltage</name>
+  <units>Volts</units>
+</sensor>
+</pod>
+
+</sensorList>
+</xml-body>

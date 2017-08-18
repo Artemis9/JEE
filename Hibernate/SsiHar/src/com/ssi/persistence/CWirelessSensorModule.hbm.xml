@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CWirelessSensorModule" table="WIRELESS_SENSOR_MODULE" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">wireless_sensor_module_sequence</param>
+			</generator>
+		</id>
+		<version name="version" column="VERSION" />
+        <property name="eui"  column="EUI" type="string" not-null="true" unique="true"/>
+			
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="active"  column="ACTIVE" type="true_false" not-null="true"/>
+		<property name="hwVersion"  column="HW_VERSION" type="string" />
+		<property name="fwVersion"  column="FW_VERSION" type="string"/>
+        <many-to-one name="gateway" class="com.ssi.persistence.CGateway" column="GATEWAY_ID" not-null="true" />
+		<many-to-one name="wsmType" class="com.ssi.persistence.CWsmType" column="WSM_TYPE_ID" not-null="true"/>
+		<property name="description"  column="DESCRIPTION" type="string"/>
+		<property name="notes"  column="NOTES" type="string"/>
+		<list name="measurements" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="16">
+            <key column="WSM_ID"/>
+            <index column="ORDERING" type="short" />
+            <one-to-many class="com.ssi.persistence.CMeasurement"/>
+        </list>
+        <list name="listenerEvents" inverse="true" lazy="true" cascade="all-delete-orphan" >
+            <key column="WSM_ID"/>
+            <index column="GW_TIMESTAMP" type="timestamp" />
+            <one-to-many class="com.ssi.persistence.CListenerEvent"/>
+        </list>
+	</class>
+</hibernate-mapping>

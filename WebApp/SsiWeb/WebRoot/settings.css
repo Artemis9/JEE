@@ -1,0 +1,156 @@
+/*	CSS _ Smartersensing 2005 Nadia English				*/
+/*	The following classes define parameters for mac and pc 			*/
+
+A  { 
+	color:#7A8045;  FONT-Family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; font-weight: bold; TEXT-DECORATION: none;
+}
+A:hover { 
+	color:#4EA8DE; FONT-Family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; font-weight: bold; TEXT-DECORATION: none;
+}
+A:roll {
+	 color:#4EA8DE; FONT-Family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; font-weight: bold; TEXT-DECORATION: none;
+}
+
+
+A.view {
+	COLOR: #000000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+A.view: visited {
+	COLOR: #AC3B2D;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+A.view:hover {
+	COLOR: #AC3B2D;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+
+
+
+
+A.history {
+	COLOR: #990000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+A.history: visited {
+	COLOR: #990000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+A.history:hover {
+	COLOR: #000000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+A.alarmview {
+	COLOR: #CC0000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+A.alarmview: visited {
+	COLOR: #000000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+A.alarmview:hover {
+	COLOR: #000000;
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+
+#verisignSeal A  { 
+	font:10px Helvetica,Verdana,Arial,sans-serif; TEXT-DECORATION: none;
+}
+#verisignSeal A:hover { 
+	font:10px Helvetica,Verdana,Arial,sans-serif; TEXT-DECORATION: none;
+}
+#verisignSeal A.view {
+	font:10px Helvetica,Verdana,Arial,sans-serif; TEXT-DECORATION: none;
+}
+#verisignSeal A.view: visited {
+	font:10px Helvetica,Verdana,Arial,sans-serif; TEXT-DECORATION: none;
+}
+#verisignSeal A.view:hover {
+	font:10px Helvetica,Verdana,Arial,sans-serif; TEXT-DECORATION: none;
+}
+
+p {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000; 
+}
+
+Table {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; color:#000000;
+}
+
+.on {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color: #CC0000; FONT-WEIGHT: normal;
+}
+
+
+
+.date {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;  color:#E1DDAC;
+}
+.welcome {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;  color:#000000;
+	FONT-WEIGHT: bold; 
+}
+.module {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;  color:#000000; FONT-WEIGHT: bold; 
+}
+
+
+.alarm {  
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px; FONT-WEIGHT: normal; color:#000000;
+}
+.alarmyes {  
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px; FONT-WEIGHT: bold; color: #CC0000;
+}
+
+.headings {  
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px; color:#FFFFFF; 
+}
+
+
+
+.sensor {  
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px; FONT-WEIGHT: normal; color:#000000;
+}
+
+
+.contact {  
+	font-family:  Verdana, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; color:#FFFFFF; 
+}

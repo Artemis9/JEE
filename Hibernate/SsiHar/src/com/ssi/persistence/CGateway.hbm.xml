@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CGateway" table="GATEWAY" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">gateway_sequence</param>
+			</generator>
+		</id>
+		<version name="version" column="VERSION" />
+		<property name="mac"  column="MAC_ID" type="string" not-null="true" unique="true" />
+        <property name="eui"  column="EUI" type="string" not-null="true" unique="true"/>
+		
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="measurementInterval"  column="MEASUREMENT_INTERVAL" type="long" not-null="true"/>
+		<property name="wakeupInterval"  column="WAKEUP_INTERVAL" type="long" not-null="true"/>
+		<property name="maxHeartBeatInterval"  column="MAX_HEARTBEAT_INTERVAL" type="long" not-null="true"/>
+		<property name="active"  column="ACTIVE" type="true_false" not-null="true"/>
+		<property name="hwVersion"  column="HW_VERSION" type="string"/>
+		<property name="fwVersion"  column="FW_VERSION" type="string"/>
+		<property name="radioFwVersion"  column="RADIO_FW_VERSION" type="string"/>
+		<property name="description"  column="DESCRIPTION" type="string"/>
+	    <property name="notes"  column="NOTES" type="string"/>
+	    
+        <set name="wsms" inverse="true" lazy="true" order-by="name asc" >
+            <key column="GATEWAY_ID"/>
+            <one-to-many class="com.ssi.persistence.CWirelessSensorModule" />
+
+        </set>
+        
+
+
+ 
+        
+        
+        
+        <many-to-one name="account" class="com.ssi.persistence.CAccount" column="ACCOUNT_ID" not-null="true"/>
+        <!--
+        <set name="ListenerEvents" inverse="true" lazy="true">
+            <key column="GATEWAY_ID"/>
+            <one-to-many class="com.ssi.persistence.CListenerEvent"/>
+        </set>
+        -->
+	</class>
+</hibernate-mapping>

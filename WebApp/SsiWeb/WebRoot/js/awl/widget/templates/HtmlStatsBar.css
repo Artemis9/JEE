@@ -1,0 +1,64 @@
+/**
+ * ACCSENSE Chart Legend 
+ */
+
+.awlStatsBar {
+	position:relative;
+	width:640px;
+	height:24px;
+}
+
+.awlStatItem {
+	position:absolute;
+	top:0px; left:0px;
+	color: #6A6A6A;
+	font: bold 12px Arial;
+	text-decoration: none;
+	width:128px;
+	height:20px;
+}
+.awlStatMin {
+	left:0px;
+}
+.awlStatMax {
+	left:128px;
+}
+.awlStatAve {
+	left:256px;
+}
+.awlStatMean {
+	left:384px;
+}
+.awlStatStdDev {
+	left:512px;
+}
+
+.awlStatLabel {
+	position:absolute;
+	top:1px; left:0px;
+	font: bold 12px Arial;
+	text-decoration: none;
+	text-align:right;
+	color:#000000;
+	width:25px;
+}
+
+.awlStatLabelWide {
+	width:35px;
+}
+
+.awlStatValue {
+	position:absolute;
+	top:1px; left:30px;
+	width:50px;
+	text-align:left;
+}
+
+.awlStatValueMean {
+	top:1px; left:48px;
+}
+.awlStatValueStdDev {
+	top:1px; left:46px;
+}
+
+

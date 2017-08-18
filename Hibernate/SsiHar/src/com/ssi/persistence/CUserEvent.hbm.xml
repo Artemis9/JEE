@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CUserEvent" table="USER_EVENT" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">user_event_sequence</param>
+			</generator>
+		</id>
+		<property name="eventCode"  column="EVENT_CODE" type="integer" not-null="true"/>
+		<property name="ts"  column="TIMESTAMP" type="timestamp" not-null="true" />
+		<many-to-one name="gateway" class="com.ssi.persistence.CGateway" column="GATEWAY_ID" not-null="true"/>
+		<many-to-one name="wsm" class="com.ssi.persistence.CWirelessSensorModule" column="WSM_ID"/>
+		<property name="updateTs"  column="UPDATE_TIMESTAMP" type="timestamp" />
+		<property name="active"  column="ACTIVE" type="true_false"  not-null="true" />
+	</class>
+</hibernate-mapping>

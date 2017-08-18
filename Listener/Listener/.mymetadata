@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise-project
+  version="1.0.0"
+  name="Listener"
+  id="myeclipse.1123279130765"
+  j2ee-spec="1.4"
+  archive="Listener.ear">
+  <project-modules>
+    <project-module
+      type="EJB"
+      name="ListenerEjb"
+      id="myeclipse.1123257401718"
+      j2ee-spec="1.4"
+      archive="ListenerEjb.jar" />
+  </project-modules>
+</enterprise-project>
+

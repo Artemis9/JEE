@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="*.vss" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/jboss-4.0.2/client/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.0.2/server/myconfig/deploy/jboss-hibernate.deployer/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/SsiHar/classes"/>
+	<classpathentry kind="lib" path="/SsiLib/bin"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SsiLib"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

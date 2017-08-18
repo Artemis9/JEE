@@ -1,0 +1,241 @@
+.roInputText {
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: transparent;
+	border: 0;
+	text-align: left;
+	width: 388px;
+	valign: bottom;
+}
+
+/* 
+ * navigation bar styles 
+ */
+div#navbar td { 
+	border-bottom: 1px solid black;
+	border-left: 1px solid black
+}
+div#navbar td#navLinkLeft { 
+	border-bottom: 1px solid black;
+	border-left: 0px solid black
+}
+div#navbar a { 
+	color: black;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px
+}
+div#navbar a:hover {
+	color:orange;
+}
+
+/* 
+ * main page styles
+ */
+.demoLoginInfo { 
+	font-weight:bold;
+	font-size: 14px;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.evenRow {
+background: #E4F1FA;
+valign: bottom;
+}
+.oddRow {
+background: white;
+valign: bottom;
+}
+.alarmRow{
+FONT-WEIGHT: normal;
+color: #FF0000;
+valign: bottom;
+}
+.alarmRedBold{
+FONT-WEIGHT: bold;
+color: #FF0000;
+valign: bottom;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+.alarmBold{
+FONT-WEIGHT: bold;
+color: #000000;
+valign: bottom;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+.emptyColumn20Trans {
+width: 20px;
+height:20px;
+}
+.emptyColumn20 {
+width: 20px;
+height:20px;
+background: white;
+}
+.sensorNameColumn {
+text-align: left;
+width: 220x;
+height:20px;
+}
+.sensorDataColumn {
+text-align: right;
+width: 85px;
+height:20px;
+}
+.emptyColumn06 {
+width: 06px;
+height:20px;
+}
+.sensorUnitColumn {
+width: 49px;
+height:20px;
+}
+.emptyColumn84 {
+width: 124px;
+height:20px;
+}
+.sensorDetailColumn {
+width: 69px;
+height:20px;
+text-align: center;
+}
+.sensorDownloadColumn{
+width: 69px;
+height:20px;
+text-align: center;
+}
+.sensorAlarmColumn {
+width: 69px;
+height:20px;
+text-align: center;
+}
+.sensorPropColumn {
+width: 69px;
+height:20px;
+text-align: center;
+}
+.emptyColumn10 {
+width: 10px;
+height:20px;
+}
+.gwNameColumn {
+text-align: left;
+width: 620px;
+height:37px;
+font-weight: bold;
+valign: bottom;
+}
+.gwPropColumn {
+width: 130px;
+height:37px;
+valign: bottom;
+text-align: center;
+}
+.wsmNameColumn {
+text-align: left;
+width: 364px;
+height:20px;
+font-weight: bold;
+valign: bottom;
+}
+.wsmTsColumn {
+width: 398px;
+height:20px;
+font-weight: bold;
+valign: bottom;
+}
+.wsmPropColumn {
+width: 70px;
+height:20px;
+valign: bottom;
+text-align: center;
+}
+
+.alarmNameColumn {
+width: 118px;
+height: 20px;
+valign: bottom;
+}
+.alarmWsmColumn {
+width: 118px;
+height:20px;
+valign: bottom;
+}
+.measurNameColumn {
+width: 118px;
+height:20px;
+valign: bottom;
+}
+.alarmValueColumn {
+width: 93px;
+height:20px;
+valign: bottom;
+text-align: right;
+}
+.alarmTsColumn {
+width: 113px;
+height:20px;
+valign: bottom;
+text-align: center;
+}
+.alarmDetailColumn {
+width: 100px;
+height:20px;
+valign: bottom;
+text-align: center;
+}
+.alarmHistoryColumn {
+width: 100px;
+height:20px;
+valign: bottom;
+text-align: center;
+}
+.error {
+color: #CC0000;
+}
+.image {
+border: 0px;
+height:24px;
+width: 24px;
+}
+.wsmImage {
+margin:3px;
+margin-left:13px;
+}
+.clearImage {
+border: 0px;
+height:37px;
+width: 3px;
+}
+.gwImage {
+border: 0px;
+height:37px;
+width: 44px;
+bgcolor: #FFFFFF
+}
+
+.style1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.button {
+	bgcolor: #F0F0F0 ;
+}
+.timer {
+	FONT-Family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: transparent;
+	border: 0;
+	text-align: right;
+	width: 460px;
+}
+.copyright {
+	font-size: 10px;
+	text-align: center;
+	color:grey;
+}

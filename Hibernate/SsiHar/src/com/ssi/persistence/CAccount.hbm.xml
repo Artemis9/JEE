@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CAccount" table="ACCOUNT" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">account_sequence</param>
+			</generator>
+		</id>
+		<version name="version" column="VERSION"/>
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="streetNo"  column="STREET_NO" type="string" />		
+        <property name="city"  column="CITY" type="string" />					
+		<property name="state"  column="STATE" type="string" />
+		<property name="zip"  column="ZIP" type="string" />
+		<property name="country"  column="COUNTRY" type="string" />
+		<property name="tel" column="TEL" type="string"  />
+		<property name="fax" column="FAX" type="string"/>
+	    <property name="notes"  column="NOTES" type="string"/>
+	    <property name="serviceLevel"  column="SERVICE_LEVEL" type="short" not-null="true"/>
+        <set name="contacts" inverse="true" lazy="true" order-by="name asc">
+            <key column="ACCOUNT_ID"/>
+            <one-to-many class="com.ssi.persistence.CContact"/>
+        </set>
+        <set name="gateways" inverse="true" lazy="true">
+            <key column="ACCOUNT_ID"/>
+            <one-to-many class="com.ssi.persistence.CGateway"/>
+        </set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,276 @@
+/*	CSS _ Smartersensing 2005 Nadia English				*/
+/*	The following classes define parameters for mac and pc 			*/
+
+A  { 
+	color:#4EA8DE;  FONT-Family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; font-weight: bold; TEXT-DECORATION: none;
+}
+A:hover { 
+	color:#A8AAA2; FONT-Family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; font-weight: bold; TEXT-DECORATION: none;
+}
+
+.linkStyle {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 14px;  color:#4EA8DE;
+	border: 0;
+	text-decoration : underline;
+	font-weight : bold;
+	background-color: transparent;
+    background-repeat: no-repeat;
+    TEXT-DECORATION: none;
+}
+.warningStyle {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#4EA8DE;
+	border: 0;
+	font-weight : bold;
+	background-color: transparent;
+    background-repeat: no-repeat;
+    TEXT-DECORATION: none;
+}
+
+.buttonStyle {
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000;
+    width:75px;
+    margin-left:2px;
+}
+
+
+/* 
+ * Popup title
+ */
+.labelStyle {
+	FONT-SIZE: 16px;
+	font-weight: bold;
+}
+
+/*
+ * Popup tabs
+ */
+.mainform {
+	width: 460px;
+}
+.measPopupTabs {
+	width: 400px; 
+	height: 275px;
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000;
+}
+.tabContents {
+}
+.itemLabel {
+    vertical-align: center;
+    text-align:left;
+}
+.itemLabelNotes {
+    padding-top: 5px;
+    padding-bottom: 8px;
+    vertical-align: center;
+    text-align:left;
+}
+.inputFieldNotes {
+    width:365px;
+}
+.response {
+	width: 90%; 
+	height: 50px;
+	float: left;
+	margin-left:15px;
+}
+.buttons {
+	float: right;
+    margin-right: 50px;
+}
+
+/* measurePopup specific styles */
+.measNotes {
+    height:130px;
+}
+.measItemLabel {
+    width:75px;
+}
+.measInfoItemLabel {
+    width:125px;
+}
+.measInputUnit {
+    width: 50px;
+}
+.measInputName {
+    width: 300px; 
+}
+.measInputCoeff {
+    width:75px;
+ 	margin-right:85px;
+}
+.measCoeffTable {
+    background-color:#FFFFFF;
+	width:100%;
+	text-align:left;
+}
+
+/* wsmPopup specific styles */
+.wsmNotes {
+    height:157px;
+}
+.wsmItemLabel {
+    width:135px;
+}
+.wsmInputName {
+    width:300px;
+}
+
+/* gwPopup specific styles */
+.gwNotes {
+    height:130px;
+}
+.gwItemLabel {
+    width:165px;
+}
+.gwInfoItemLabel {
+    width:175px;
+}
+.gwInputName {
+    width: 213px; 
+}
+.gwInputInterval {
+    width: 50px;
+}
+
+/* alarmPopup specific styles */
+.alarmNotes {
+    height:155px;
+}
+.alarmItemLabel {
+    width:25px;
+}
+.alarmEnabled {
+    margin-left: 10px;
+}
+.alarmEnabledLabel {
+    font-weight:bold;
+    width:100px;
+}
+.alarmInputName {
+    width: 215px; 
+}
+.alarmTriggerItemLabel {
+    width: 100px;
+    height: 30px;
+}
+.alarmFilterItemLabel {
+    width: 90px;
+    height: 88px;
+}
+.alarmNotifyListBox{
+    height: 50px;
+}
+.alarmSelectLogic{
+	margin-left:3px;
+}
+.alarmNotifyMsgBox{
+    height: 100px;
+}
+.alarmNotifyMessage {
+   margin-left:10px;  
+   font-size: 10px;
+   color: #4EA8DE;
+}
+.requiredFields {
+   margin-top: 3px;
+   float:right;
+}
+
+p {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000; 
+}
+
+Table {  
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; color:#000000;
+}
+
+
+/**
+ * sensor data table
+ */
+.dataTableTopCap {
+	background: url(js/awl/widget/templates/images/topCapBlue.gif) no-repeat;
+	height:10px;
+	font-size:1px;
+}
+.dataTableBottomCap {
+	background: url(js/awl/widget/templates/images/bottomCapBlue.gif) no-repeat;
+	height:10px;
+}
+
+
+.errorMini {
+color: #CC0000;
+font-size: 10px;
+}
+.error {
+color: #CC0000;
+}
+.message {
+color: #4EA8DE;
+}
+.popuptitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+.image {
+border: 0px;
+height:32px;
+width: 32px;
+}
+
+/* 
+ * detailsPopup Tab
+ */
+
+.detailsMainform {
+}
+.detailPopupTabs {
+	width: 755px; 
+	height: 438px;
+	
+	font-family:  Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  color:#000000;
+}
+.detailTabContents {
+	height:400px;
+}
+
+/*
+ * Alarm history popup
+ */
+.evenRow {
+	background: #E4F1FA;
+}
+.oddRow {
+	background: white;
+}
+.sensorHeader {
+	background: #CCCCCC;
+	text-align: left;
+}
+.alarmHistTable {
+	width: 90%;
+}
+.columnTs {
+	width:145px;
+}
+.columnUnit {
+	text-align: center;
+}
+.columnAlarmName {
+}
+.columnPodName {
+	width:145px;
+}
+.columnMeasurName {
+}
+.columnValue {
+}

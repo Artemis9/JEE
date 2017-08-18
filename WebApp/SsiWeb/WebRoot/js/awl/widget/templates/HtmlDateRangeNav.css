@@ -1,0 +1,25 @@
+/**
+ * ACCSENSE Date range selection navigation bar
+ */
+.dataTableNav {
+	background: #77C0E9;
+	position:relative;
+	height:33px;
+	border:none;
+}
+a.dateRangeNavButton{
+	margin-left: 3px;
+	margin-right: 8px;
+	margin-top: 8px;
+	color: white;
+	font: bold 14px Arial;
+	text-decoration: none;
+}
+a.dateRangeNavButton:hover{
+	color: red;
+	margin-left: 3px;
+	margin-right: 8px;
+	margin-top: 8px;
+	font: bold 14px Arial;
+	text-decoration: none;
+}

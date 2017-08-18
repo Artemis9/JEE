@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CSsiConstants" table="SSI_CONSTANTS" mutable="false">
+		<cache usage="read-only"/>
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">ssi_constants_sequence</param>
+			</generator>
+		</id>
+			<property name="name"  column="NAME" type="string" not-null="true" />
+        	<property name="value"  column="VALUE" type="string" not-null="true" />
+	</class>
+</hibernate-mapping>

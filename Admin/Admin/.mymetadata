@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise-project
+  version="1.0.0"
+  name="Admin"
+  id="myeclipse.1143670860187"
+  j2ee-spec="1.4"
+  archive="Admin.ear">
+  <project-modules>
+    <project-module
+      type="EJB"
+      name="AdminEjb"
+      id="myeclipse.1143670777562"
+      j2ee-spec="1.4"
+      archive="AdminEjb.jar" />
+  </project-modules>
+</enterprise-project>
+

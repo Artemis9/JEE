@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CRole" table="ROLE" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">role_sequence</param>
+			</generator>
+		</id>
+		<version name="version" column="VERSION" />
+		<property name="uname"  column="UNAME" type="string" not-null="true"/>
+		<property name="pw"  column="PW" type="string" not-null="true" />		
+        <property name="admin"  column="ADMIN" type="true_false" not-null="true" />
+        <many-to-one name="owner" class="com.ssi.persistence.CContact" column="CONTACT_ID" not-null="true"/>					
+	</class>
+</hibernate-mapping>

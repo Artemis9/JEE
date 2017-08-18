@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise-project
+  version="1.0.0"
+  name="Ssi"
+  id="myeclipse.1125772712484"
+  j2ee-spec="1.4"
+  archive="Ssi.ear">
+  <project-modules>
+    <project-module
+      type="WEB"
+      name="SsiWeb"
+      id="myeclipse.1125599839828"
+      context-root="/SSIWeb"
+      j2ee-spec="1.4"
+      archive="SsiWeb.war">
+      <attributes>
+        <attribute name="webrootdir" value="/WebRoot" />
+      </attributes>
+    </project-module>
+    <project-module
+      type="EJB"
+      name="SsiEjb"
+      id="myeclipse.1125511572703"
+      j2ee-spec="1.4"
+      archive="SsiEjb.jar" />
+  </project-modules>
+</enterprise-project>
+

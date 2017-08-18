@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.SensorData" table="TEMP_SENSOR_DATA" >
+		<id name="id" column="ID" type="long">
+		</id>
+		<property name="value"  column="VALUE" type="float" not-null="true"/>
+		<property name="ts"  column="TIMESTAMP" type="timestamp" not-null="true"/>
+	</class>
+</hibernate-mapping>

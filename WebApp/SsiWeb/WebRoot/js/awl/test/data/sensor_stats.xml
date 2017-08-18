@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+	<xml-body>
+	<sensor_stats>
+		<min>12.34</min>
+		<max>90.786</max>
+		<ave>182.45</ave>
+		<median>190.23</median>
+		<stdDev>4.2</stdDev>
+	</sensor_stats> 
+	</xml-body>

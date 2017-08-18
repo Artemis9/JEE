@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>TEST -- Manual Scale Widget Select</title>
+<script type="text/javascript">
+	var djConfig = { isDebug: true };
+</script>
+<script type="text/javascript" src="../../dojo/dojo.js"></script>
+<script type="text/javascript" src="../widget/ScaleSelect.js"></script>
+
+<!-- Dojo is loaded, include the widget  -->
+<script type="text/javascript">
+	dojo.setModulePrefix('awl', '../awl');
+	dojo.widget.manager.registerWidgetPackage('awl.widget');
+	dojo.require("awl.widget.ScaleSelect");
+</script>
+
+<style>
+.awlScaleSelectContainer{
+	border:thin dashed black;
+} 
+</style>
+</head>
+
+<body>
+<div style="width:300px; height:50px; background-color:#00FF00; z-index:99">
+<br />
+Scale Select Widget
+</div>
+
+<div style="width:0px;">
+<fieldset  style="background-color: #c0ced9;">
+<legend>Vertical Scaling</legend>
+<div dojoType="scaleSelect" id="div1"></div>
+</fieldset>
+</div>
+<br /> Above is inside a fieldset with ledgend
+<br /> Below is just in a div with background color
+<br />
+
+<div style="background-color:#666666;width:0px;">
+<div dojoType="scaleSelect" id="div2"></div>
+</div>
+
+<br />
+<br /> Here is a manual scale view:
+<br />
+
+<div style="width:0px;margin:0px;">
+<fieldset style="background-color: #c0ced9;">
+<div dojoType="scaleSelect" autoScaleFlag="false" defaultMin="100" defaultMax="8675309" id="div3"></div>
+</fieldset>
+</div>
+<input type="submit" value="Validate Min/Max" onClick="dojo.widget.byId('div3').validate()" />
+
+<script>
+	var objNames = [ "div1", "div2", "div3" ];
+	for(var on=0; on<objNames.length; on++) {
+		var objName = objNames[on];
+		dojo.debug("---" + objName + "---");
+		var obj = dojo.byId(objName);
+		var actualW = dojo.style.getOuterWidth(obj);
+		dojo.debug("Width: actual="+ actualW + ", expected=197");
+		obj.style.width=actualW;
+	}
+</script>
+
+					
+</body>
+</html>

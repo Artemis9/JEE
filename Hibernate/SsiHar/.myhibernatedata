@@ -1,0 +1,19 @@
+#
+#Wed Apr 12 11:03:41 PDT 2006
+springDaoFile=
+genVersionTag=false
+daoSFId=
+configFile=/SsiHar/src/hibernate.cfg.xml
+sessionFactoryId=
+profile=
+libInstallFolder=<no jars/zips in selected libraries>
+addLibs2Classpath=true
+jndiPath=
+genBasicCompId=false
+addLibs2Project=true
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+version=3.0
+useJavaTypes=false
+reSettingsFile=

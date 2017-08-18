@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CWsmType" table="WSM_TYPE" mutable="false">
+		<cache usage="read-only"/>
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">wsm_type_sequence</param>
+			</generator>
+		</id>
+		<property name="typeId"  column="TYPE_ID" type="string" not-null="true" unique="true" />
+		<property name="defaultName"  column="DEFAULT_NAME" type="string" not-null="true"/>
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="description"  column="DESCRIPTION" type="string"/>
+
+		<list name="measurementTypes"  table="WSM_MEASUREMENT_TYPE" lazy="true">
+            <key column="WSM_TYPE_ID"/>
+            <index column="ORDERING" type="short" />
+            <many-to-many column="MEASUREMENT_TYPE_ID" class="com.ssi.persistence.CMeasurementType"/>
+        </list>
+	</class>
+</hibernate-mapping>

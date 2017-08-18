@@ -1,0 +1,42 @@
+<ejb-jar 
+     xmlns="http://java.sun.com/xml/ns/j2ee"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                         http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"
+     version="2.1">
+
+<enterprise-beans>
+   <session>
+     <ejb-name>AdminManager</ejb-name>
+     <local-home>com.ssi.admin.ejb.IAdminManagerHome</local-home>
+     <local>com.ssi.admin.ejb.IAdminManagerLocal</local>
+     <ejb-class>com.ssi.admin.ejb.CAdminManagerBean</ejb-class>
+     <session-type>Stateless</session-type>
+     <transaction-type>Container</transaction-type>
+     <security-identity><use-caller-identity/></security-identity>
+  </session>
+ </enterprise-beans>
+ <assembly-descriptor>
+   <security-role>
+      <description>
+         This role represents everyone who is allowed full access to the beans.
+      </description>
+     <role-name>everyone</role-name>
+   </security-role>
+   <method-permission>
+     <role-name>everyone</role-name>
+     <method>
+       <ejb-name>AdminManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+   </method-permission>
+   <container-transaction>
+     <method>
+       <ejb-name>AdminManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+     <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+ </assembly-descriptor>
+</ejb-jar>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CWsmData" table="WSM_DATA" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">wsm_data_sequence</param>
+			</generator>
+		</id>
+		<property name="value"  column="VALUE" type="short" not-null="true"/>
+		<property name="dataCode"  column="DATA_CODE" type="string" not-null="true"/>
+	    <many-to-one name="listenerEvent" class="com.ssi.persistence.CListenerEvent" column="LISTENER_EVENT_ID" not-null="true"/>	
+	</class>
+</hibernate-mapping>

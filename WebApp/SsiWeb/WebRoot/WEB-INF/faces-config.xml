@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN" "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+	<!-- +++++++++++++++++++++ Navigation rules ++++++++++++++++++ -->
+	<navigation-rule>
+		<description>Main Page Refresh </description>
+		<from-view-id>/gatewayContents.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Download</from-outcome>
+			<to-view-id>/gatewayContents.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>MoveHistory</from-outcome>
+			<to-view-id>/gatewayContents.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>SessionLogoff</from-outcome>
+			<to-view-id>/login.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/gatewayContents.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Login </description>
+		<from-view-id>/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Success</from-outcome>
+			<to-view-id>/gatewayContents.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/login.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Demo Login </description>
+		<from-view-id>/demo.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Success</from-outcome>
+			<to-view-id>/gatewayContents.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/login.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Update Gateway </description>
+		<from-view-id>/gwPopup.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Update</from-outcome>
+			<to-view-id>/gwPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/gwPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Close</from-outcome>
+			<to-view-id>/autoclose.jsp</to-view-id>
+		</navigation-case>
+        <navigation-case>
+            <from-outcome>UpdateAndClose</from-outcome>
+            <to-view-id>/autoclose.jsp</to-view-id>
+        </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<description>Update Wsm</description>
+		<from-view-id>/wsmPopup.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Update</from-outcome>
+			<to-view-id>/wsmPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/wsmPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Close</from-outcome>
+			<to-view-id>/autoclose.jsp</to-view-id>
+		</navigation-case>
+        <navigation-case>
+            <from-outcome>UpdateAndClose</from-outcome>
+            <to-view-id>/autoclose.jsp</to-view-id>
+        </navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Update Measurement</description>
+		<from-view-id>/measurPopup.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Update</from-outcome>
+			<to-view-id>/measurPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Close</from-outcome>
+			<to-view-id>/gatewayContents.jsp</to-view-id>
+			<redirect/>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/measurPopup.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Update Alarm Definition</description>
+		<from-view-id>/alarmPopup.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Update</from-outcome>
+			<to-view-id>/alarmPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Close</from-outcome>
+			<to-view-id>/autoclose.jsp</to-view-id>
+		</navigation-case>
+        <navigation-case>
+            <from-outcome>UpdateAndClose</from-outcome>
+            <to-view-id>/autoclose.jsp</to-view-id>
+        </navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/alarmPopup.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Update Account </description>
+		<from-view-id>/accountOptions.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Update</from-outcome>
+			<to-view-id>/accountOptions.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/accountOptions.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<description>Alarm HIstory popup and pagination </description>
+		<from-view-id>/alarmHistPopup.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>Refresh</from-outcome>
+			<to-view-id>/alarmHistPopup.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>Failed</from-outcome>
+			<to-view-id>/alarmHistPopup.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<!-- +++++++++++++++++++++ Managed beans +++++++++++++++++++++ -->
+	<managed-bean>
+		<description>
+			Login bean
+		</description>
+		<managed-bean-name>login</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.Login</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Account bean
+		</description>
+		<managed-bean-name>account</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.Account</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Mesh bean
+		</description>
+		<managed-bean-name>meshBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.Mesh</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Gateway bean
+		</description>
+		<managed-bean-name>gatewayBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.Gateway</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	
+	
+	<managed-bean>
+		<description>
+			Wsm bean
+		</description>
+		<managed-bean-name>wsmBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.Wsm</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Measurement bean
+		</description>
+		<managed-bean-name>measurementBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.Measurement</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Measurement samples bean
+		</description>
+		<managed-bean-name>measurementSamplesBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.MeasurementSample</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Alarm bean
+		</description>
+		<managed-bean-name>alarmBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.AlarmDefinition</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<managed-bean>
+		<description>
+			Alarm History bean
+		</description>
+		<managed-bean-name>alarmHistBean</managed-bean-name>
+		<managed-bean-class>com.ssi.web.bean.AlarmHistory</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>
+	<!-- +++++++++++++++++++++ Components +++++++++++++++++++++ -->
+	<component>
+		<component-type>com.ssi.web.jsf.FlowState</component-type>
+		<component-class>com.ssi.web.jsf.FlowState</component-class>
+	</component>
+</faces-config>

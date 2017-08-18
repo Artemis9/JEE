@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CListenerEvent" table="LISTENER_EVENT" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">listener_event_sequence</param>
+			</generator>
+		</id>
+		<property name="eventCode"  column="EVENT_CODE" type="integer" not-null="true"/>
+		<property name="ts"  column="TIMESTAMP" type="timestamp" not-null="true"/>
+		
+		<many-to-one name="gateway" class="com.ssi.persistence.CGateway" column="GATEWAY_ID" not-null="true"/>
+		<many-to-one name="wsm" class="com.ssi.persistence.CWirelessSensorModule" column="WSM_ID" />
+		
+		<property name="gwTs"  column="GW_TIMESTAMP" type="timestamp"/>
+
+	    <list name="sensorData" inverse="true" lazy="true" cascade="all-delete-orphan">
+            <key column="LISTENER_EVENT_ID"/>
+            <index column="ORDERING" type="short" />
+            <one-to-many class="com.ssi.persistence.CSensorData"/>
+        </list>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<jboss>
+     <enterprise-beans>
+     <session> 
+		 <ejb-name>SsiManager</ejb-name>
+		 <jndi-name>SsiManagerRemote</jndi-name>
+		 <local-jndi-name>SsiManagerLocal</local-jndi-name>
+     </session>
+     <session> 
+		 <ejb-name>AccountManager</ejb-name>
+		 <jndi-name>AccountManagerRemote</jndi-name>
+		 <local-jndi-name>AccountManagerLocal</local-jndi-name>
+     </session>
+     <session> 
+		 <ejb-name>AlarmManager</ejb-name>
+		 <jndi-name>AlarmManagerRemote</jndi-name>
+		 <local-jndi-name>AlarmManagerLocal</local-jndi-name>
+     </session>
+     </enterprise-beans>
+</jboss>

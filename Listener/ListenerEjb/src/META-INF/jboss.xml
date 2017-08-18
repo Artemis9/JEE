@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<jboss>
+     <enterprise-beans>
+     <session> 
+		 <ejb-name>ListenerManager</ejb-name>
+		 <jndi-name>ListenerManagerRemote</jndi-name>
+		 <local-jndi-name>ListenerManagerLocal</local-jndi-name>
+		 <resource-ref>
+			 <res-ref-name>mail/SsiJavaMailSession</res-ref-name>
+			 <jndi-name>java:/Mail</jndi-name>
+		 </resource-ref>
+     </session>
+     </enterprise-beans>
+</jboss>
+

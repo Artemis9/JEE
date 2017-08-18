@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ssi.persistence.CMeasurement" table="MEASUREMENT" >
+		<id name="id" column="ID" type="long">
+			<generator class="sequence">
+				<param name="sequence">measurement_sequence</param>
+			</generator>
+		</id>
+		<version name="version" column="VERSION" />
+		<property name="name"  column="NAME" type="string" not-null="true"/>
+		<property name="unit" column="UNIT" type="string" not-null="true"/>
+		<property name="ordering"  column="ORDERING" type="short" not-null="true" />
+		<property name="coeff1"  column="COEFF1"  not-null="true"/>
+		<property name="coeff2"  column="COEFF2"  not-null="true"/>
+		<property name="coeff3"  column="COEFF3"  not-null="true"/>
+		<property name="coeff4"  column="COEFF4"  not-null="true"/>
+		
+		<property name="valueMin"  column="VALUE_MIN"  not-null="true"/>
+		<property name="valueMax"  column="VALUE_MAX"  not-null="true"/>
+		<property name="minMaxAuto"  column="MIN_MAX_AUTO" type="true_false" not-null="true"/>
+		
+		<property name="description"  column="DESCRIPTION" type="string"/>
+		<property name="notes"  column="NOTES" type="string"/>	
+		<many-to-one name="wsm" class="com.ssi.persistence.CWirelessSensorModule" column="WSM_ID" not-null="true"/>
+		<many-to-one name="measurementType" class="com.ssi.persistence.CMeasurementType" column="MEASUREMENT_TYPE_ID" not-null="true"/>
+		
+        <set name="alarmDefinitions" inverse="true" lazy="true" cascade="all-delete-orphan" batch-size="256" >
+            <key column="MEASUREMENT_ID"/>
+            <one-to-many class="com.ssi.persistence.CAlarmDefinition"/>
+        </set>
+        <set name="sensorDataSample" inverse="true" lazy="true" cascade="all-delete-orphan" >
+            <key column="MEASUREMENT_ID"/>
+            <one-to-many class="com.ssi.persistence.CSensorData"/>
+        </set>
+	</class>
+</hibernate-mapping>

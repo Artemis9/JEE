@@ -1,0 +1,262 @@
+/**
+ * Data navigation bar 
+ */
+.awlDataNavBarContainer {
+	height:300px;
+}
+.leftEdge {
+	background: transparent url(images/navleft.gif) no-repeat scroll right top; 
+	float: left; 
+	width: 10px; 
+	height: 34px;
+}
+.rightEdge {
+	background: transparent url(images/navright.gif) no-repeat scroll right top; 
+	float: left; 
+	width: 10px; 
+	height: 34px;
+}
+
+input{
+	cursor:pointer;cursor:hand;
+	margin-top: 2px;
+}
+select{
+	cursor:pointer;cursor:hand;
+	margin-top: 1px;
+}
+
+a.navLink{
+	margin-left: 3px;
+	margin-right: 8px;
+	margin-top: 8px;
+	float: left;
+	color: white;
+	font: bold 12px Arial;
+	text-decoration: none;
+}
+
+a.navLink:hover{
+	color: red;
+	margin-left: 3px;
+	margin-right: 8px;
+	margin-top: 8px;
+	float: left;
+	font: bold 12px Arial;
+	text-decoration: none;
+}
+
+
+/**
+ * navBasic styles
+ */
+.navBasic {
+	width:695px;
+	height:34px;
+}
+.middleBar{
+	width:665px;
+	height:34px;
+	background: url(images/navmid.gif) top left repeat;
+	padding-left: 10px;
+	color: white;
+	float: left;
+	font: bold 12px Arial;
+}
+.navButtons {
+	cursor:pointer;cursor:hand;
+	width:400px;
+	margin-top: 10px;
+}
+.navTimescale {
+	width:265px;
+	float:right;
+}
+.duration {
+	cursor:pointer;cursor:hand;
+	width: 45px;
+}
+.durationCustom {
+	width: 50px;
+	text-align:right;
+	margin-top: 0px;
+}
+.durationUnits {
+	cursor:pointer;cursor:hand;
+	width: 75px;
+}
+.navLabel{
+	font: bold 12px Arial;
+	color: white;
+	margin-top: 1px;
+	float: left;
+	text-decoration: none;
+	text-align:center;
+}
+
+/**
+ * navAdvanced styles
+ */
+.navAdvanced {
+	position:relative;
+	overflow:visible;
+	width:670px;
+	height: 53px;
+	border:thin black solid;
+	border-top:none;
+	background-color:#999999;
+	color: white;
+	font: bold 12px Arial;
+	z-index:99;
+	left:0px;
+}
+
+/* horizontal scaling fieldset */
+.fieldsetLabel{
+	color: white;	
+}
+.scalingHoriz {
+	position:absolute;
+	top:0;
+	left:202px;
+}
+.horizFieldset {
+	color: white;
+	width:442px;
+	height:22px;
+}
+..horizFieldsetIE{
+	width:453px;
+	height:22px;
+}
+.navDateSelect{
+	position:absolute;
+}
+.navDateSelect1 {
+	top:14px; left:-4px;
+	z-index:99;
+}
+.navDateSelect2 {
+	top:14px; left:227px;
+}
+
+/**
+ * vertical scaling fieldset 
+ */
+.scalingVert {
+	position:absolute;
+	top:0; left:3px;
+}
+.vertFieldset {
+	width:175px;
+	height:25px;
+}
+..vertFieldsetIE{
+	width:183px;
+	height:22px;
+}
+/* override HtmlScaleSelect.css styles */
+div.awlScaleSelectContainer{
+	width:177px;
+	height:22px;
+}
+input.checkbox {
+	position:relative;
+	left:-1px; top:1px;
+}
+label.asLabel {
+	position:absolute;
+	left:-3px; top:-5px;
+}
+label.minLabel {
+	position:absolute;
+	left:4px; top:30px;
+}
+label.maxLabel {
+	position:absolute;
+	left:92px;	top:30px;
+}
+input.minInputField {
+	position:absolute;
+	left:26px; top:-5px;
+	width:50px;
+	cursor:text;
+}
+input.maxInputField {
+	position:absolute;
+	left:30px; top:-5px;
+	width:50px;
+	cursor:text;
+}
+
+
+/**
+ * open/close drawerControl
+ */
+.drawerControl {
+	cursor:pointer;cursor:hand;
+	position:relative;
+	width:670px;
+	background-color:#999999;
+	border:thin black solid;
+	left: 0px;
+	border-top:none;
+	display: none; /* only visible if javascript is enabled */
+}
+
+
+/**
+ *  Status
+ */
+.awlNavLeft {
+	float:left;
+	width:400px;
+}
+.navStatus {
+	float:right;
+	height:24px;
+	width:200px;
+	margin-top: 5px;
+	margin-left: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size:18px;
+	text-decoration:blink;
+}
+
+/*
+ * Help tooltip
+ */
+.bubble_tooltip{
+	width:147px;
+	height:60px;
+	position:absolute;
+	display:none;
+}
+.bubble_top{
+	background-image: url(images/bubble2_top.gif);
+	background-repeat:no-repeat;
+	height:44px;	
+}
+.bubble_middle{
+	background-image: url(images/bubble2_middle.gif);
+	background-repeat:repeat-y;	
+	background-position:bottom left;
+	padding-left:7px;
+	padding-right:7px;
+}
+.bubble_middle span{
+	position:relative;
+	top:-8px;
+	font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+	font-size:11px;
+}
+.bubble_bottom{
+	background-image: url(images/bubble2_bottom.gif);
+	background-repeat:no-repeat;
+	background-repeat:no-repeat;	
+	height:16px;
+	position:relative;
+	top:-6px;
+}
+

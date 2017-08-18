@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+	var djConfig = { isDebug: true };
+</script>
+<script type="text/javascript" src="../../dojo/dojo.js"></script>
+<script type="text/javascript" src="../widget/DataTable.js"></script>
+<script type="text/javascript" src="../common.js"></script>
+
+<!-- Dojo is loaded, include the widget  -->
+<script type="text/javascript">
+	dojo.require("dojo.widget.html.DatePicker");
+
+	dojo.setModulePrefix('awl', '../awl');
+	dojo.widget.manager.registerWidgetPackage('awl.widget');
+	dojo.require("awl.widget.DateSelect");
+</script>
+<style>
+div.awlDateSelectInputContainer {
+	border:dashed black thin;
+}
+</style>
+</head>
+
+<body>
+<div style="width:300px; height:25px; background-color:#FF0000; z-index:99"></div>
+<center>
+<div style="background-color:#CCCCCC;height:50px;">
+<div dojoType="dateSelect" 
+	 minDateValue="1144701600000" 
+ 	 maxDateValue="1145047200000" 
+	 labelString="Last Date: ">
+</div>
+</div>
+</center>
+
+<!--
+<div dojoType="FloatingPane"
+titleBarDisplay="none"
+constrainToContainer="true"
+hasShadow="true"
+resizable="false"
+displayMinimizeAction="false"
+displayMaximizeAction="false"
+displayCloseAction="true"
+style="width: 169px; height: 200px; left: 200px; top:85px;">
+<center>
+<div dojoType="datepicker"></div>
+<div>Close Window</div>
+</center>
+</div>
+-->
+					
+</body>
+</html>

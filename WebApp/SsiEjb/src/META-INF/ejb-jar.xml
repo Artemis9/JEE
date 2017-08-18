@@ -1,0 +1,89 @@
+<ejb-jar 
+     xmlns="http://java.sun.com/xml/ns/j2ee"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                         http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"
+     version="2.1">
+
+<enterprise-beans>
+   <session>
+     <ejb-name>SsiManager</ejb-name>
+     <home>com.ssi.ejb.ISsiManagerRemoteHome</home>
+     <remote>com.ssi.ejb.ISsiManagerRemote</remote>
+     <local-home>com.ssi.ejb.ISsiManagerHome</local-home>
+     <local>com.ssi.ejb.ISsiManagerLocal</local>
+     <ejb-class>com.ssi.ejb.CSsiManagerBean</ejb-class>
+     <session-type>Stateless</session-type>
+     <transaction-type>Container</transaction-type>
+     <security-identity><use-caller-identity/></security-identity>
+  </session>
+  <session>
+     <ejb-name>AccountManager</ejb-name>
+     <home>com.ssi.ejb.IAccountManagerRemoteHome</home>
+     <remote>com.ssi.ejb.IAccountManagerRemote</remote>
+     <local-home>com.ssi.ejb.IAccountManagerHome</local-home>
+     <local>com.ssi.ejb.IAccountManagerLocal</local>
+     <ejb-class>com.ssi.ejb.CAccountManagerBean</ejb-class>
+     <session-type>Stateless</session-type>
+     <transaction-type>Container</transaction-type>
+     <security-identity><use-caller-identity/></security-identity>
+  </session>
+  <session>
+     <ejb-name>AlarmManager</ejb-name>
+     <home>com.ssi.ejb.IAlarmManagerRemoteHome</home>
+     <remote>com.ssi.ejb.IAlarmManagerRemote</remote>
+     <local-home>com.ssi.ejb.IAlarmManagerHome</local-home>
+     <local>com.ssi.ejb.IAlarmManagerLocal</local>
+     <ejb-class>com.ssi.ejb.CAlarmManagerBean</ejb-class>
+     <session-type>Stateless</session-type>
+     <transaction-type>Container</transaction-type>
+     <security-identity><use-caller-identity/></security-identity>
+  </session>
+ </enterprise-beans>
+
+ <assembly-descriptor>
+
+   <security-role>
+      <description>
+         This role represents everyone who is allowed full access to the beans.
+      </description>
+     <role-name>everyone</role-name>
+   </security-role>
+
+   <method-permission>
+     <role-name>everyone</role-name>
+     <method>
+       <ejb-name>SsiManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+     <method>
+       <ejb-name>AccountManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+     <method>
+       <ejb-name>AlarmManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+   </method-permission>
+
+   <container-transaction>
+     <method>
+       <ejb-name>SsiManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+     <method>
+     <ejb-name>AccountManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+     <method>
+     <ejb-name>AlarmManager</ejb-name>
+       <method-name>*</method-name>
+     </method>
+     <trans-attribute>Required</trans-attribute>
+   </container-transaction>
+   
+   
+ </assembly-descriptor>
+
+</ejb-jar>
+
